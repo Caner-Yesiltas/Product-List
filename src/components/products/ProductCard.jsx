@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { MdFavorite } from "react-icons/md";
 
-const ProductCard = () => {
+const ProductCard = ({id,title,price, description,image}) => {
   return (
     <Card className="rounded-2 m-auto card" role="button">
       <Card.Header className="d-flex justify-content-between">
