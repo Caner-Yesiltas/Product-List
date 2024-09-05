@@ -2,7 +2,9 @@ import React from "react";
 import { Button, Container, Stack } from "react-bootstrap";
 import "./Header.scss";
 import { categories } from "../../helper/data";
-export const Header = ({categories}) => {
+
+
+export const Header = ({categories,handleCategories}) => {
   return (
     <Container className="header">
       <h1>Products List</h1>
@@ -13,7 +15,7 @@ export const Header = ({categories}) => {
       >
        {
         categories.map((item) => (
-          <Button>{item}</Button>
+          <Button onClick={handleCategories}   >{item.toUpperCase()}</Button>
         )
           
           
